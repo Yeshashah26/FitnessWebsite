@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Programs - Vitality Fitness</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+        main {
+            flex: 1;
+        }
+        .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .program-gradient {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .program-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .program-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .price-tag {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 pt-16">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-heading font-bold text-blue-600">Vitality</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Home</a>
+                    <a href="programs.html" class="nav-link text-gray-900 hover:text-blue-600 font-medium">Programs</a>
+                    <a href="about.html" class="nav-link text-gray-600 hover:text-blue-600 font-medium">About</a>
+                    <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition duration-300">Join Now</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-600 hover:text-gray-900">Home</a>
+                <a href="programs.html" class="block px-3 py-2 text-gray-900 font-medium">Programs</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-600 hover:text-gray-900">About</a>
+                <a href="#" class="block px-3 py-2 bg-blue-600 text-white rounded mx-2 text-center">Join Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Header Section -->
+        <section class="py-12 md:py-16 program-gradient text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">Fitness Programs</h1>
+                <p class="text-lg md:text-xl opacity-95">Choose the perfect program for your fitness journey</p>
+            </div>
+        </section>
+
+        <!-- Programs Grid -->
+        <section class="py-16 md:py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Our Programs</h2>
+                    <p class="text-lg md:text-xl text-gray-600">Designed by experts for maximum results</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    <!-- Strength Training -->
+                    <div class="program-card bg-white p-6 border border-gray-200">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-dumbbell text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-semibold mb-3 text-gray-900">Strength Training</h3>
+                        <p class="text-gray-600 text-sm md:text-base mb-4">Build muscle and increase strength with personalized weight training.</p>
+                        <div class="price-tag text-white text-center py-2 px-4 rounded-full mb-4">
+                            <span class="font-heading font-bold">$89/month</span>
+                        </div>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                            <li>• Personalized workout plans</li>
+                            <li>• Progress tracking</li>
+                            <li>• Nutrition guidance</li>
+                            <li>• 24/7 trainer support</li>
+                        </ul>
+                        <a href="#" class="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+                            Get Started
+                        </a>
+                    </div>
+
+                    <!-- Cardio Blast -->
+                    <div class="program-card bg-white p-6 border border-gray-200">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-running text-2xl text-green-600"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-semibold mb-3 text-gray-900">Cardio Blast</h3>
+                        <p class="text-gray-600 text-sm md:text-base mb-4">High-intensity cardio workouts to boost endurance and burn fat.</p>
+                        <div class="price-tag text-white text-center py-2 px-4 rounded-full mb-4">
+                            <span class="font-heading font-bold">$79/month</span>
+                        </div>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                            <li>• HIIT workouts</li>
+                            <li>• Running programs</li>
+                            <li>• Heart rate monitoring</li>
+                            <li>• Group sessions</li>
+                        </ul>
+                        <a href="#" class="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+                            Get Started
+                        </a>
+                    </div>
+
+                    <!-- Yoga & Flexibility -->
+                    <div class="program-card bg-white p-6 border border-gray-200">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-spa text-2xl text-purple-600"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-semibold mb-3 text-gray-900">Yoga & Flexibility</h3>
+                        <p class="text-gray-600 text-sm md:text-base mb-4">Improve flexibility, balance, and mental clarity with yoga.</p>
+                        <div class="price-tag text-white text-center py-2 px-4 rounded-full mb-4">
+                            <span class="font-heading font-bold">$69/month</span>
+                        </div>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                            <li>• Various yoga styles</li>
+                            <li>• Meditation sessions</li>
+                            <li>• Breathing techniques</li>
+                            <li>• Flexibility training</li>
+                        </ul>
+                        <a href="#" class="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+                            Get Started
+                        </a>
+                    </div>
+
+                    <!-- Weight Loss -->
+                    <div class="program-card bg-white p-6 border border-gray-200">
+                        <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-weight text-2xl text-orange-600"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-semibold mb-3 text-gray-900">Weight Loss</h3>
+                        <p class="text-gray-600 text-sm md:text-base mb-4">Comprehensive program focused on sustainable weight loss.</p>
+                        <div class="price-tag text-white text-center py-2 px-4 rounded-full mb-4">
+                            <span class="font-heading font-bold">$99/month</span>
+                        </div>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                            <li>• Custom meal plans</li>
+                            <li>• Cardio & strength mix</li>
+                            <li>• Weekly progress checks</li>
+                            <li>• Community support</li>
+                        </ul>
+                        <a href="#" class="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+                            Get Started
+                        </a>
+                    </div>
+
+                    <!-- Senior Fitness -->
+                    <div class="program-card bg-white p-6 border border-gray-200">
+                        <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-heart text-2xl text-teal-600"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-semibold mb-3 text-gray-900">Senior Fitness</h3>
+                        <p class="text-gray-600 text-sm md:text-base mb-4">Gentle exercises designed for older adults to maintain mobility.</p>
+                        <div class="price-tag text-white text-center py-2 px-4 rounded-full mb-4">
+                            <span class="font-heading font-bold">$59/month</span>
+                        </div>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                            <li>• Low-impact exercises</li>
+                            <li>• Balance training</li>
+                            <li>• Joint health focus</li>
+                            <li>• Social activities</li>
+                        </ul>
+                        <a href="#" class="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+                            Get Started
+                        </a>
+                    </div>
+
+                    <!-- Personal Training -->
+                    <div class="program-card bg-white p-6 border border-gray-200">
+                        <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-user text-2xl text-red-600"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-semibold mb-3 text-gray-900">1-on-1 Training</h3>
+                        <p class="text-gray-600 text-sm md:text-base mb-4">Personalized attention with dedicated trainer sessions.</p>
+                        <div class="price-tag text-white text-center py-2 px-4 rounded-full mb-4">
+                            <span class="font-heading font-bold">$149/month</span>
+                        </div>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                            <li>• Dedicated trainer</li>
+                            <li>• Customized programs</li>
+                            <li>• Flexible scheduling</li>
+                            <li>• Premium facilities</li>
+                        </ul>
+                        <a href="#" class="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 md:py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">Not Sure Which Program?</h2>
+                <p class="text-lg md:text-xl mb-6 md:mb-8 text-gray-600">Take our free fitness assessment to find your perfect match</p>
+                <a href="#" class="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition duration-300 inline-block">
+                    Take Free Assessment
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 md:py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <div>
+                    <h3 class="text-lg md:text-xl font-heading font-bold mb-4">Vitality Fitness</h3>
+                    <p class="text-gray-400 text-sm md:text-base">Transforming lives through fitness and wellness.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3 md:mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white text-sm md:text-base">Home</a></li>
+                        <li><a href="programs.html" class="text-gray-400 hover:text-white text-sm md:text-base">Programs</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white text-sm md:text-base">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3 md:mb-4">Programs</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm md:text-base">Strength Training</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm md:text-base">Cardio Blast</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm md:text-base">Yoga & Flexibility</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3 md:mb-4">Contact</h4>
+                    <p class="text-gray-400 text-sm md:text-base">info@vitalityfitness.com</p>
+                    <p class="text-gray-400 text-sm md:text-base">+1 (555) 123-4567</p>
+                    <p class="text-gray-400 text-sm md:text-base">123 Fitness St, Healthy City</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-6 md:mt-8 pt-6 md:pt-8 text-center text-gray-400 text-sm md:text-base">
+                <p>&copy; 2024 Vitality Fitness. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobile-menu');
+            const menuButton = document.getElementById('mobile-menu-button');
+            
+            if (!menu.contains(event.target) && !menuButton.contains(event.target) && !menu.classList.contains('hidden')) {
+                menu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

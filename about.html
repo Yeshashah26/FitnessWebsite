@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Vitality Fitness</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+        main {
+            flex: 1;
+        }
+        .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .about-gradient {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .team-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .value-icon {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 pt-16">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-heading font-bold text-blue-600">Vitality</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Home</a>
+                    <a href="programs.html" class="nav-link text-gray-600 hover:text-blue-600 font-medium">Programs</a>
+                    <a href="about.html" class="nav-link text-gray-900 hover:text-blue-600 font-medium">About</a>
+                    <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition duration-300">Join Now</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-600 hover:text-gray-900">Home</a>
+                <a href="programs.html" class="block px-3 py-2 text-gray-600 hover:text-gray-900">Programs</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-900 font-medium">About</a>
+                <a href="#" class="block px-3 py-2 bg-blue-600 text-white rounded mx-2 text-center">Join Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Header Section -->
+        <section class="py-12 md:py-16 about-gradient text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">About Vitality Fitness</h1>
+                <p class="text-lg md:text-xl opacity-95">Transforming lives through fitness and community</p>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section class="py-16 md:py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
+                    <div>
+                        <h2 class="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
+                        <p class="text-gray-600 text-lg md:text-xl mb-6">
+                            Founded in 2018, Vitality Fitness began with a simple mission: to make high-quality fitness accessible to everyone. What started as a small local gym has grown into a community of over 2,500 members.
+                        </p>
+                        <p class="text-gray-600 text-lg md:text-xl mb-8">
+                            We believe that fitness is not just about physical strength, but about mental wellness, community support, and personal growth. Our team of certified trainers and nutritionists are dedicated to helping you achieve your goals.
+                        </p>
+                        <div class="grid grid-cols-2 gap-6 md:gap-8">
+                            <div class="text-center">
+                                <div class="text-2xl md:text-3xl font-heading font-bold value-icon mb-2">2,500+</div>
+                                <div class="text-gray-600 text-sm md:text-base">Happy Members</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl md:text-3xl font-heading font-bold value-icon mb-2">15+</div>
+                                <div class="text-gray-600 text-sm md:text-base">Expert Trainers</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl md:text-3xl font-heading font-bold value-icon mb-2">6</div>
+                                <div class="text-gray-600 text-sm md:text-base">Years Serving</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl md:text-3xl font-heading font-bold value-icon mb-2">98%</div>
+                                <div class="text-gray-600 text-sm md:text-base">Success Rate</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-200 rounded-xl p-8 text-center h-64 flex items-center justify-center">
+                        <span class="text-gray-600 text-lg">Gym Facility Image</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="py-16 md:py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Our Values</h2>
+                    <p class="text-lg md:text-xl text-gray-600">The principles that guide everything we do</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                    <div class="bg-white p-6 rounded-xl text-center">
+                        <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-users text-xl value-icon"></i>
+                        </div>
+                        <h3 class="font-heading text-lg font-semibold mb-3">Community</h3>
+                        <p class="text-gray-600 text-sm">We believe in the power of community support and accountability.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl text-center">
+                        <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-graduation-cap text-xl value-icon"></i>
+                        </div>
+                        <h3 class="font-heading text-lg font-semibold mb-3">Expertise</h3>
+                        <p class="text-gray-600 text-sm">Our trainers are certified professionals with years of experience.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl text-center">
+                        <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-heart text-xl value-icon"></i>
+                        </div>
+                        <h3 class="font-heading text-lg font-semibold mb-3">Wellness</h3>
+                        <p class="text-gray-600 text-sm">We focus on holistic wellness - mind, body, and spirit.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl text-center">
+                        <div class="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-trophy text-xl value-icon"></i>
+                        </div>
+                        <h3 class="font-heading text-lg font-semibold mb-3">Excellence</h3>
+                        <p class="text-gray-600 text-sm">We strive for excellence in every aspect of our service.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="py-16 md:py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
+                    <p class="text-lg md:text-xl text-gray-600">Certified professionals dedicated to your success</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                    <div class="team-card bg-gray-50 p-6 rounded-xl text-center">
+                        <div class="w-20 h-20 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-gray-600">JD</span>
+                        </div>
+                        <h3 class="font-heading text-lg font-semibold mb-2">John Doe</h3>
+                        <p class="text-blue-600 text-sm mb-3">Head Trainer</p>
+                        <p class="text-gray-600 text-sm">15+ years experience in strength training and nutrition.</p>
+                    </div>
+                    <div class="team-card bg-gray-50 p-6 rounded-xl text-center">
+                        <div class="w-20 h-20 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-gray-600">SM</span>
+                        </div>
+                        <h3 class="font-heading text-lg font-semibold mb-2">Sarah Miller</h3>
+                        <p class="text-blue-600 text-sm mb-3">Yoga Instructor</p>
+                        <p class="text-gray-600 text-sm">Certified yoga teacher with expertise in mindfulness.</p>
+                    </div>
+                    <div class="team-card bg-gray-50 p-6 rounded-xl text-center">
+                        <div class="w-20 h-20 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-gray-600">MB</span>
+                        </div>
+                        <h3 class="font-heading text-lg font-semibold mb-2">Mike Brown</h3>
+                        <p class="text-blue-600 text-sm mb-3">Cardio Specialist</p>
+                        <p class="text-gray-600 text-sm">Marathon runner and HIIT training expert.</p>
+                    </div>
+                    <div class="team-card bg-gray-50 p-6 rounded-xl text-center">
+                        <div class="w-20 h-20 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <span class="text-gray-600">LW</span>
+                        </div>
+                        <h3 class="font-heading text-lg font-semibold mb-2">Lisa Wilson</h3>
+                        <p class="text-blue-600 text-sm mb-3">Nutritionist</p>
+                        <p class="text-gray-600 text-sm">Registered dietitian specializing in sports nutrition.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section class="py-16 md:py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Visit Us</h2>
+                    <p class="text-lg md:text-xl text-gray-600">Come experience the Vitality difference</p>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="font-heading text-xl font-semibold mb-4">Location</h3>
+                        <p class="text-gray-600 mb-6">123 Fitness Street<br>Healthy City, HC 12345</p>
+                        <h3 class="font-heading text-xl font-semibold mb-4">Hours</h3>
+                        <p class="text-gray-600 mb-2">Monday - Friday: 5:00 AM - 11:00 PM</p>
+                        <p class="text-gray-600 mb-2">Saturday: 6:00 AM - 9:00 PM</p>
+                        <p class="text-gray-600">Sunday: 7:00 AM - 8:00 PM</p>
+                    </div>
+                    <div class="bg-gray-200 rounded-xl h-64 flex items-center justify-center">
+                        <span class="text-gray-600">Map Location</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section class="py-16 md:py-20 about-gradient text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="font-heading text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">Ready to Join?</h2>
+                <p class="text-lg md:text-xl mb-6 md:mb-8 opacity-95">Start your fitness journey with a free trial session</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#" class="bg-white text-blue-600 px-6 md:px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300 text-sm md:text-base">
+                        Free Trial
+                    </a>
+                    <a href="#" class="border-2 border-white text-white px-6 md:px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition duration-300 text-sm md:text-base">
+                        Call Us
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+       <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 md:py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <div>
+                    <h3 class="text-lg md:text-xl font-heading font-bold mb-4">Vitality Fitness</h3>
+                    <p class="text-gray-400 text-sm md:text-base">Transforming lives through fitness and wellness.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3 md:mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white text-sm md:text-base">Home</a></li>
+                        <li><a href="programs.html" class="text-gray-400 hover:text-white text-sm md:text-base">Programs</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white text-sm md:text-base">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3 md:mb-4">Programs</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm md:text-base">Strength Training</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm md:text-base">Cardio Blast</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm md:text-base">Yoga & Flexibility</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-3 md:mb-4">Contact</h4>
+                    <p class="text-gray-400 text-sm md:text-base">info@vitalityfitness.com</p>
+                    <p class="text-gray-400 text-sm md:text-base">+1 (555) 123-4567</p>
+                    <p class="text-gray-400 text-sm md:text-base">123 Fitness St, Healthy City</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-6 md:mt-8 pt-6 md:pt-8 text-center text-gray-400 text-sm md:text-base">
+                <p>&copy; 2024 Vitality Fitness. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    </body>
+</html>
